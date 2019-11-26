@@ -6,12 +6,13 @@ const path = require('path');
 
 
 app.use( function (req, res, next) {
-    req.time = new date()
+    req.currenttime=new Date();
     next()
 });
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    // res.sendFile(path.join(__dirname + '/index.html'));
+    res.end(req.currenttime=new Date())
 });
 app.get('/mon', function(req, res) {
     res.sendFile(path.join(__dirname + '/mon.html'));
