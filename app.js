@@ -11,8 +11,8 @@ app.use( function (req, res, next) {
 });
 
 app.get('/', function(req, res) {
-    // res.sendFile(path.join(__dirname + '/index.html'));
-    res.end(req.currenttime=new Date())
+    res.sendFile(path.join(__dirname + '/index.html'));
+    //res.end(req.currenttime=new Date())
 });
 app.get('/mon', function(req, res) {
     res.sendFile(path.join(__dirname + '/mon.html'));
